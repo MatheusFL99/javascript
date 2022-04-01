@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 6</title>
+</head>
+<body>
+    <h1>Conversor R$ -> US$</h1>
+    <input type="button" value="Converter" onclick="converter()" >
+    <div id="res">Clique no botão acima para inciar.</div>
+    <script>
+        let cotacao = Number(window.prompt('Quanto está a cotação do dólar nesse momento?'))
+        function converter(){
+            let dinheiro = Number(window.prompt('Quanto você te na carteira?'))
+            let conversao = cotacao*dinheiro
+            let res = window.document.getElementById('res')
+            res.innerHTML = `R$${dinheiro} equivalem a US$${conversao.toFixed(2)}`
+        }
+    </script>
+</body>
+</html>

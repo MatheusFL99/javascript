@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deafio 10</title>
+    <style>
+        h1{
+            text-align: center;
+            color: white;
+
+        }
+        body{
+            background: rgb(103, 185, 252);
+            font: normal 15pt Arial;
+            
+        }
+        section{
+            background: white;
+            border-radius: 10px;
+            width: 800px;
+            padding: 1em;
+            height: auto;
+            margin: auto;
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.432);
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Resolvendo Bhaskara</h1>
+    <section>
+        <div class="dados">
+            <input type="number" name="numa" id="numa" placeholder="Valor de a">
+            <input type="number" name="numb" id="numb" placeholder="Valor de b">
+            <input type="number" name="numc" id="numc" placeholder="Valor de c">
+            <input type="button" value="Calcular" onclick="calcular()">
+
+        </div>
+        <div class="res">
+            <p>Considerando uma equação no formato ax<sup>2</sup> + bx + c = 0, aperte o botão acima para calcular o valor de Δ.</p>
+        </div>
+    </section>
+    <script>
+        let na = document.getElementById('numa')
+        let nb = document.getElementById('numb')
+        let nc = document.getElementById('numc')
+        let res = document.querySelector('div.res')
+        function calcular() {
+            a = na.value
+            b = nb.value
+            c = nc.value
+            delta = b**2 - 4*a*c
+            if (na.value.length == 0 || nb.value.length == 0 || nc.value.length == 0) {
+                res.innerHTML = `<p>Considerando uma equação no formato ax<sup>2</sup> + bx + c = 0, aperte o botão acima para calcular o valor de Δ.</p>`
+            } else {
+                res.innerHTML = `<p>A equação atual é ${b}x<sup>2</sup> + ${b}x + ${c} = 0<br><br>O cáculo realizado será Δ = ${b}<sup>2</sup> - 4 . ${a} . ${b}<br><br>O valor calculado foi Δ = ${delta}</p>`
+            }
+            
+            
+        }
+    </script>
+</body>
+</html>

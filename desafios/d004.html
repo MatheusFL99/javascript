@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversão de medidas</title>
+</head>
+<body>
+    <h1>Convertendo medidas</h1>
+    <button onclick="converter()">Converter</button>
+    <div id="res">Clique no botão para começar</div>
+    <script>
+        function converter(){
+            let medida = Number(window.prompt('Digite a medida em metros que deseja converter'))
+            let res = window.document.getElementById('res')
+           /* document.write(`<strong>${medida}</strong> metros em kilometros é ${medida/1000} <br>`)
+            document.write(`<strong>${medida}</strong> metros em centímetros é ${medida*100} <br>`)
+            document.write(`<strong>${medida}</strong> metros em milímetros é ${medida*1000} <br>`)*/
+            res.innerHTML = `<strong>${medida}</strong> metros em kilometros é ${medida/1000}(km) <br> <strong>${medida}</strong> metros em centímetros é ${medida*100}(cm) <br> <strong>${medida}</strong> metros em milímetros é ${medida*1000}(mm) <br>`
+        }
+
+    </script>
+    
+</body>
+</html>

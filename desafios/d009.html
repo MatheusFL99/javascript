@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 09</title>
+    <style>
+        *{
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+        .titulo{
+            color: white;
+            font-size: 2em;
+            text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.192);
+        }
+        body{
+            text-align: center;
+            align-items: center;
+            background-color: rgb(22, 124, 241);
+            padding: 90px;
+        }
+        main{
+            align-items: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.226);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="titulo">Reajuste Salarial</h1>
+    </header>
+    <main>
+        <div class="dados">
+            <input type="button" value="Calcular" onclick="reajustar()">
+        </div>
+        <div class="res">
+            <p>Clique no botão para começar</p>
+        </div>
+    </main>
+    <script>
+        let res = document.querySelector('div.res')
+        function reajustar() {
+            let nome = window.prompt('Digite o nome do funcionário')
+            let salv = Number(window.prompt(`Digite salário de ${nome}`))
+            let porcn =  Number(window.prompt(`Digite a porcentagem do ajuste salarial de ${nome}`))
+            porc = porcn/100
+            let salvn = salv+salv*porc
+
+            res.innerHTML = `<h2> ${nome} recebeu um aumento salarial!</h2> <br> O salário era de R$${salv}. <br>Com um aumento de ${porcn}%, o salário vai aumentar ${salv*porc} no próximo mês <br>${nome} vai passar a ganhar R$${salvn}.` 
+        }
+    </script>
+</body>
+</html>

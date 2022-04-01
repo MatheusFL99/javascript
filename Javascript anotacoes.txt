@@ -1,0 +1,157 @@
+//Dicas: 
+ - Letra maiúscula e minúscal fazem diferença
+ - Tente escolher nomes coerentes para variáveis
+ - Evite se tornar um 'Progamador alfabeto' ou um 'Programador contador'
+ 
+ 
+//Identificadores:
+ - Podem começar com letra, $ ou _
+ - Não podem começar com números
+ - É possível usar letras ou números
+ - É possível usar acentos e símbolos
+ - Não podem conter espaços
+ - Não podem ser palavras reservadas 
+
+
+//Tipos de dados:
+ - Number
+ 	Infinity
+ 	NaN
+ - String
+ - Boolean
+ - Null
+ - undefined
+ - Object
+ 	Array
+ - Function
+
+
+//Uso do +:
+ - O símbolo + em JS pode servir tanto para concatenação quanto adição, quando 
+ 	(number + number) para adição
+ 	(string + string) para concatenação
+
+ 
+//Conversão de tipos:
+ - Converter para um número Inteiro: Number.parseInt(n)
+ - Converter para um número Real: Number.parseFloat(n)
+ - Converter para qualquer tipo de número: Number(n)
+ - Converter para string: String(n) ou n.toString()
+
+//Formatando Strings
+s = javascript
+ - 'Eu estou aprendendo s'           não faz interpolação
+ - 'Eu estou aprendendo ' + s        usa concatenação
+ - `Eu estou aprendendo ${s}`        usa template string
+ 
+ - s.length         //quantos caracteres a string tem
+ - s.toUpperCase() //tudo para 'MAIÚSCULAS'
+ - s.toLowerCase() //tudo para 'minúsculas'
+ 
+ //Formatando Números
+ var n1 = 1543.5
+ - n1.toFixed(n)  //N é o número de casas decimais que vai aparecer
+ - n1.toLocaleString('pt-BR, {style: 'currency', currency: 'BRL'}) // Converte o número em um valor monetario, podendo escolher qualquer tipo de moeda
+ 
+//Operadores
+  - Aritiméticos: + - * / % ** (Ordem de precedência: (), **, * / %, + -)
+  - Atibuição: x=x+1 ==  x++  incrementa 1
+  		     x=x-1 ==  x--  subtrai 1
+  		     
+  - Relacionais: '<' '>' '<=' '>=' '==' '!==' '===' '!==='
+  	Exemplos: preço >= 200.50 //o preço é amior ou igual a 200.50?
+  	          idade < 18      //sua idade é mais que 18?	          
+  	Exemplos de identidade: 5 == 5 -> true
+  	          5 == '5' -> true    // sinal de igualdade não testa o tipo, só a grandeza
+  	          5 === '5' -> false  //	 sinal de identidade leva em consideração o valor e o tipo
+  	          
+  - Lógicos (em ordem): '!' '&&' '||'
+  	
+  Precedência: aritiméticos, relacionais e por fim lógicos. Todos eles nas suas ordens de precedência
+  
+  - Ternário: '?' ':' 
+  	? == acontece se for true
+  	: == acontece se for false
+  
+//Simplificando auto-atribuições
+ - Exemplo: var n1 = 20
+ 		n1 = n1+20 == 40
+ 		n1 +=20 ==40
+ 		os 2 métodos funcionam do mesmo jeito
+ 		 
+//Árvore DOM
+	window
+		location
+		document
+			html
+				head
+					meta
+					title
+				body
+					h1
+					p
+						strong
+					div
+		history
+		...
+
+//Selecionando
+	por Marca
+		getElementsByTagName()
+	por ID
+		getElementByID()
+	por Nome
+		getElementsByName()
+	por Classe
+		getElementsByClassName()
+	por Seletor
+		querySelector()
+		querySelectorAll()
+		
+Todo id é representada por '#' e toda classe é representada por '.'
+
+//Eventos DOM
+	Eventos com mouse numa div: 
+		- mouseenter: ao mouse entrar na div
+		- mousemove: ao mouse se mover dentro da div 	
+		- mousedown: ao clicar e segurar o botao do mouse
+		- mouseup: ao soltar o botão do mouse
+		- click: ao clicar no mouse
+		- mouseout: ao sair da div
+		
+//Função em javascript
+	É um conjunto de linhas(bloco) que vão ser executadas só quando o evento ocorrer
+	Exemplo: function ação(parametros) {
+			bloco de códigos
+			}
+ 
+ //Condição múltipla
+ - Switch case
+	switch (expressão) {
+		case 1:
+		
+//Repetições
+	while (condição){
+	enquanto a condição for verdadeira, continua executando o código dentro do while
+	}
+	do{
+	executa os comandos e repete se a condição for verdadeira
+	}while(condição)
+	While: Testa e executa enquanto a condição for verdadeira
+	Do while: Executa, testa a condição enquanto for verdadeira
+
+//Variáveis
+	- Variavel simples só consegue armazear um valor por vez.
+	- Variavel composta é capaz de armazear vários valores em uma mesma estrutura.
+	Um vetor é uma variável que tem vários elementos, cada elemento é composto por um valor e uma chave de identificação
+	
+//Vetores
+	variavel.push(n) - adiciona um valor n no ultimo slot do array
+	variavel.length - mostra o comprimento de um array
+	variavel.sort() - organiza o array em ordem crescente
+	for (let cont in variavel){ } - versão simplificada do for para arrays
+	variavel.index(n) - procura e retorna a posicao que o valor n se encontra ou -1 se não encontrar
+	
+//Funções
+	- São ações executadas assim que são chamadas ou em decorrencia de algum evento
+	- Uma função pode receber parâmetros e tetornar um resultado.

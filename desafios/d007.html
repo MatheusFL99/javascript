@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 7</title>
+</head>
+<body>
+    <h1>Cáculo de desconto</h1>
+    <input type="button" value="Desconto de 10%" onclick="iniciar()">
+    <p></p>
+    <div id="res">Clique no botão acima para iniciar.</div>
+    <div id="res2"></div>
+    <div id="res3"></div>
+    <script>
+        function iniciar(){
+            let produto = window.prompt('Digite o nome do produto que está comprando.')
+            let preco = Number(window.prompt('Digite o valor original do produto'))
+            let novop = preco*0.9
+            let res = window.document.getElementById('res')
+            let res2 = window.document.getElementById('res2')
+            let res3 = window.document.getElementById('res3')
+            res.innerHTML = `Parabéns! Você ganhou <strong>10% de desconto!</strong>`
+            res2.innerHTML = `Inicialmente ${produto} custaria <strong>R$${preco}</strong>`
+            res3.innerHTML = `Com 10% de desconto você vai pagar <strong>R$${novop}</strong> no produto ${produto}!`
+        }
+    </script>
+    
+</body>
+</html>
